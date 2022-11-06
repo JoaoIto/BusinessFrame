@@ -1,4 +1,4 @@
-# Alura Frame 💰🤑
+# [Alura Frame](https://joaoito.github.io/BusinessFrame/) 💰🤑
 
 ***Negociações: Aluraframe{***
 
@@ -6,7 +6,7 @@
 
 <img src="https://raw.githubusercontent.com/JoaoIto/AluraFrame/main/AluraFrame.png#vitrinedev">
 
-# 
+---
 ## Modelo de negociação {
 
 - **Parte 1**
@@ -365,7 +365,7 @@ add(event) {
         console.log(business);
     }
 ```
-#
+---
 ## Date Views
 **Temos um modelo de Negociacao, outro de ListaNegociacoes, e temos uma controller que orquestra o acesso aos modelos de acordo com as ações do usuário. No entanto, ainda não conseguimos refletir o estado do modelo para a tela. A tabela ainda não exibe os dados cadastrados.**
 
@@ -517,4 +517,4 @@ Para que tudo funcione, ainda vamos utilizar todo em um modelo, já que a nossa 
 
 **Logo isso, usamos o mesmo método de MVC dentro do nosso footer tabelar, e fazemos com que isso seja utilizado uma função de total dentro de volume, que utiliza o reduce, para indicar os demais valores e somar dentro de somente um inner de um elemento do template HTML!**
 
-#
+---
