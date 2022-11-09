@@ -11,6 +11,7 @@ export class Negociacoes{
     modificável, mas deixa o originável imutável 
     depois de adicionado
     */
+   
     lista(): readonly Negociacao[]{
         return this.negociacoes;
     }
