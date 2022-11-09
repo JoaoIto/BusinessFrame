@@ -47,7 +47,8 @@ export class Negociacao {
 
 - Este método, não é um método especial, já é um método comum no JavaScript, onde apenar empurra para o final do elemento o seu parâmetro, que no caso será o objeto de `negociacao()`.
 ---
-3. **Depois, o código já está funcional. Porém precisamos entender como tornar este array, não pode ser mutável ou modificável. Usaremos a propriedade `readonly`**
+
+3. **Depois, o código já está funcional. Porém precisamos entender como tornar este array, não pode ser mutável ou modificável. Usaremos a propriedade [readonly](https://tutorialsnest.com/typescript-readonly-and-static/#:~:text=Readonly%20in%20Typescript%20If%20we%20mark%20any%20property,the%20value%20assigned%20and%20cannot%20modify%20or%20update.)**
 
 - E assim, utilizamos um marcador de, `readonly`, que já faz essa função. Sempre, e é comum utilizarmos a instanciação destes arrays para não serem mutáveis, criando-se uma cópia mutável, porém o array original, não pode ser modificável
 
