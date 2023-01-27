@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap"
+    rel="stylesheet">
+
   <title>BusinessFrame-TSC</title>
 </head>
 
-  <body class="w-screen h-screen flex items-center">
-    <h1 class="text-9xl">Negociações</h1>
-    <div id="mensagemView"></div>
+<body>
+  <h1 id="title">Negociações</h1>
+  <div id="mensagemView"></div>
 
-    <form class="form flex items-center">
+  <form class="form flex items-center">
+    <fieldset>
       <div class="form-group">
         <label for="data">Data</label>
         <input type="date" id="data" class="form-control" required autofocus />
@@ -29,8 +37,15 @@
       </div>
 
       <button class="btn btn-primary" type="submit">Incluir</button>
-    </form>
+    </fieldset>
+  </form>
 
-    <script type="module" src="./src/app/app.ts"></script>
+  <section class="tableBusiness">
+    <div id="negociacoesView">
+
+    </div>
+  </section>
+  <script type="module" src="./src/app/app.ts"></script>
 </body>
+
 </html>
