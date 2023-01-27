@@ -2,6 +2,6 @@
 
 **Esta aplicação web é a versão atualizada do alura frame feita antigamente em JS puro, e agora utilizamos o modelo MVC parecido, porém agora em TypeScript, com tipagem de valores e variáveis, método getters, contructor, objetos e classes, passando por uma modelo de negociação web**
 
-<img src="https://github.com/JoaoIto/BusinessFrame-TSC/blob/main/public/print.png">
+<img src="https://github.com/JoaoIto/BusinessFrame-TSC/blob/main/public/printApp.png">
 
 ---
