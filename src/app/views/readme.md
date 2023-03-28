@@ -25,3 +25,27 @@ export abstract class View<T>{ // Definição de classe abstrata com <T>, indica
 ```
 
 ---
+
+## Utilizando os tipos:
+
+**- `abstract`: O tipo *`abstract`* dentro do contexto da MessageView, que é a classe feita para responsabilidade de exibir a mensagem na tela depois da negociação feita, utilizando e obrigando a reescrita.**
+
+**- `<T>`: Esta sintaxe explica que o elemento deve ser de tipo variável, dependendo da classe que usará a herança, e assim poderá modificar a classe que precisar, podendo usar seus métodos dependendo deste tipo.**
+
+
+- Classe:
+
+```ts
+export class MessageView extends View<string> { // Especificando tipo, a partir da herança que é da classe pai com <T>
+
+    template(model: string): string {
+        return `
+            <p class="alert alert-info">${model}</p>
+        `;
+    }
+}
+```
+
+Note ainda, que isso ajuda a principal vantagem do uso do TypeScript, pois se tirarmos os elementos abstratos, temos ainda sem erros de compilação, porém esta classe pode ser utilizada e criada a partir de qualquer parte do código, **OQUE NÃO FAZ SENTIDO!** 
+
+Já que precisamos jogar a responsabilidade de usar a base desta classe, para a herança utilizada para as classes filhas.
