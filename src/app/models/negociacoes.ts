@@ -3,7 +3,7 @@ import { Negociacao } from "./negociacao";
 export class Negociacoes{
     private negociacoes: Negociacao[] = [];
 
-    adiciona(negociacao: Negociacao){
+    public adiciona(negociacao: Negociacao){
         this.negociacoes.push(negociacao);
     }
 
@@ -12,7 +12,7 @@ export class Negociacoes{
     depois de adicionado
     */
    
-    lista(): readonly Negociacao[]{
+    public lista(): readonly Negociacao[]{
         return this.negociacoes;
     }
 }
