@@ -4,7 +4,7 @@
 
 **Esse projeto vai ser um projeto desenvolvido pela Alura, como um site de negociações, uma agenda para negociações! Vamos pegar um projeto básico de um site de HTML e CSS e vamos implementar as funções em JS para que seja totalmente funcional. E assim vamos conhecer os padrões de projetos do browser para que seja executado o nosso JS.**
 
-<img src="https://raw.githubusercontent.com/JoaoIto/AluraFrame/main/AluraFrame.png#vitrinedev">
+<img src="./AluraFrame.png">
 
 ---
 ## Modelo de negociação {
