@@ -31,6 +31,20 @@ export class Negociacao {
     get volume(): number {
         return this._quantidade * this._valor;
     }
+
+// Criando método estático de classe:
+
+/* Este método, é puxado diretamente de classe para o
+controller, para que a responsabilidade seja da classe, e assim
+puxada para o controller */
+
+    public static criaDe(dateString: string, quantidadeString: string, valorString: string){
+        const exp = /-/g;
+        const date = new Date(dateString.replace(exp, ","));
+        const quantidade = parseInt(quantidadeString);
+        const valor = parseFloat(valorString);
+        return new Negociacao(date, quantidade, valor);
+    }
 }
 ```
 
