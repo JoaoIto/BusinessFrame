@@ -9,8 +9,8 @@ export class NegociacaoController {
   private inputQuantidade!: HTMLInputElement;
   private inputValor!: HTMLInputElement;
   private negociacoes: Negociacoes = new Negociacoes();
-  private negociacoesView = new NegociacoesView("#negociacoesView", true);
-  private messageView = new MessageView("#message");
+  private negociacoesView = new NegociacoesView("#negociacoesView");
+  private messageView = new MessageView("#messageView");
 
   constructor() {
     const inputData = document.querySelector("#data");

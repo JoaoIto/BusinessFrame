@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./css/output.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,37 +16,127 @@
   <title>BusinessFrame-TSC</title>
 </head>
 
-<body>
-  <h1 id="title">Negociações</h1>
+<body class="
+w-screen
+h-screen
+flex
+flex-col
+items-center
+justify-center
+font-Inter
+bg-yellowBg
+">
+  <h1 class="
+  font-Poppins 
+  text-greyTitle 
+  text-4xl" id="title">Negociações</h1>
   <div id="mensagemView"></div>
 
-  <form class="form flex items-center">
-    <fieldset>
-      <div class="form-group">
-        <label for="data">Data</label>
-        <input type="date" id="data" class="form-control" required autofocus />
+  <form class="form h-3/5 
+  w-5/6 
+  flex 
+  flex-col 
+  items-center">
+    <fieldset class="
+     text-greyFontFieldset
+     font-bold
+     flex
+     flex-col
+     items-center
+     justify-evenly
+     border-solid
+     border-2
+     rounded-xl
+     border-yellowBorder
+     shadow-lg
+     shadow-yellowBoxShadow
+     bg-yellowBgFieldset
+     w-3/5
+     my-8
+     py-6
+    ">
+      <div class="
+      form-group
+      flex 
+      flex-col 
+      items-center 
+      w-5/6
+      ">
+        <label class="text-xl" for="data">Data</label>
+        <input type="date" id="data" class="
+        form-control
+        font-Popping 
+        h-8 
+        w-3/4 
+        p-3
+        rounded-xl
+        border-solid
+        border-2
+        border-yellowBorder
+        " required autofocus />
       </div>
 
-      <div class="form-group">
-        <label for="quantidade">Quantidade</label>
-        <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required />
+      <div class="
+      form-group
+      flex 
+      flex-col 
+      items-center 
+      w-5/6
+      ">
+        <label class="text-xl" for="quantidade">Quantidade</label>
+        <input type="number" min="1" step="1" id="quantidade" class="
+        form-control
+        font-Popping 
+        h-8 
+        w-3/4 
+        p-3
+        rounded-xl
+        border-solid
+        border-2
+        border-yellowBorder
+        " value="1" required />
       </div>
 
-      <div class="form-group">
-        <label for="valor">Valor</label>
-        <input id="valor" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+      <div class="
+      form-group
+      flex 
+      flex-col 
+      items-center 
+      w-5/6
+      ">
+        <label class="text-xl" for="valor">Valor</label>
+        <input id="valor" type="number" class="
+        form-control
+        font-Popping 
+        h-8 
+        w-3/4 
+        p-3
+        rounded-xl
+        border-solid
+        border-2
+        border-yellowBorder
+        " min="0.01" step="0.01" value="0.0" required />
       </div>
 
       <button class="btn btn-primary" type="submit">Incluir</button>
     </fieldset>
   </form>
 
-  <section class="tableBusiness">
+  <section class="
+  tableBusiness
+   flex
+   items-center
+   justify-evenly
+   flex-col
+   w-4/6
+  ">
     <div id="negociacoesView">
 
     </div>
   </section>
   <script type="module" src="./src/app/app.ts"></script>
 </body>
+
 </html>
+
 <head>

@@ -9,5 +9,5 @@ if (form) {
     controller.adiciona();
   });
 } else {
-  throw Error('Elemento form não encontrado.');
+  console.error('Elemento form não encontrado.');
 }
