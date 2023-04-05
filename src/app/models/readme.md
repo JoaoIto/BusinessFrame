@@ -34,6 +34,7 @@ export class Negociacao {
 }
 ```
 
+---
 ## Negociacoes
 
 **A partir do arquivo que temos de negociacao, a classe que temos, construimos a classe de negocicacoes. Como o próprio nome no plural já diz tudo, é isso... Uma classe que serve para construir um array com os objetos de cada negociacão.**
@@ -42,11 +43,12 @@ export class Negociacao {
 1. **Definimos o import e uma variável comum de array no TypeScript.**
 
 - Quer dizer que assim, vamos chamar uma variável comum, que é do tipo do próprio objeto de `Negociacao`, e assim só precisamos definir que é um array, com o trecho entre colchetes. Muito parecido com a sintaxe de Java no back-end...
----
+
+
 2. **Após isso, entendemos que este array precisa adicionar a cada vez que for chamado seu método principal, cada negociacao feita, e assim usamos o método comum de array: `push()`.**
 
 - Este método, não é um método especial, já é um método comum no JavaScript, onde apenar empurra para o final do elemento o seu parâmetro, que no caso será o objeto de `negociacao()`.
----
+
 
 3. **Depois, o código já está funcional. Porém precisamos entender como tornar este array, não pode ser mutável ou modificável. Usaremos a propriedade [readonly](https://tutorialsnest.com/typescript-readonly-and-static/#:~:text=Readonly%20in%20Typescript%20If%20we%20mark%20any%20property,the%20value%20assigned%20and%20cannot%20modify%20or%20update.)**
 
