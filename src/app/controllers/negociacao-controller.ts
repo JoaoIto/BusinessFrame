@@ -11,8 +11,6 @@ export class NegociacaoController {
   private negociacoes: Negociacoes = new Negociacoes();
   private negociacoesView = new NegociacoesView("#negociacoesView");
   private messageView = new MessageView("#message");
-  private readonly DOMINGO = 0;
-  private readonly SABADO = 6;
 
   constructor() {
     const inputData = document.querySelector("#data");
