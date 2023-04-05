@@ -5,28 +5,45 @@
 **Logo após, os métodos são os mais importantes:**
 
 ```ts
-adiciona(): void {
-        const negociacao = this.criaNegociacao();
-        console.log(negociacao);
-        this.limparFormulario();
+public adiciona(): void {
+    const negociacao = Negociacao.criaDe(
+        this.inputData.value,
+        this.inputQuantidade.value,
+        this.inputValor.value
+    );
+    if (!this.diaUtil(negociacao.data)) {
+      console.log("Faça negociação em um dia útil!");
+      window.alert("Faça negociação em um dia útil!");
+      this.messageView.update("Faça negociação em um dia útil!");
+      return;
     }
+      this.negociacoes.adiciona(negociacao);
+      console.log(this.negociacoes.lista());
+      this.limparFormulario();
+      this.updateView();
+  }
 
-criaNegociacao(): Negociacao {
-        const exp = /-/g;
-        const date = new Date(this.inputData.value.replace(exp, ','));
-        const quantidade = parseInt(this.inputQuantidade.value);
-        const valor = parseFloat(this.inputValor.value);
-        return new Negociacao(date, quantidade, valor);
-    }
+    private diaUtil(date: Date) {
+    return date.getDay() > weekDays.DOMINGO && date.getDay() < weekDays.SABADO;
+  }
 
-    limparFormulario(): void {
-        this.inputData.value = '';
-        this.inputQuantidade.value = '';
-        this.inputValor.value = '';
-        this.inputData.focus();
-    }
+  private limparFormulario(): void {
+    this.inputData.value = "";
+    this.inputQuantidade.value = "";
+    this.inputValor.value = "";
+    this.inputData.focus();
+  }
+
+  private updateView(): void {
+    this.negociacoesView.update(this.negociacoes);
+    this.messageView.update("Negociação adicionada!");
+  }
 ```
 
-Identificamos que aqui, primeiramente definimos, através daquela propriedade tipada como *Date* e agora podemos utilizá-la através do botão, com addEventListenter dentro do arquivo de *app.ts*. 
+O método principal desta classe, **é o método adiciona, onde ele direciona o modelo de negociação, localizado em *`negociacao.ts`*, onde ele chama o `criaDe()` do modelo**, e assim ele consegue carregar a criação do modelo. Depois fazemos as verificações.
 
-**O método de `criaNegociacao(): Negociacao` que chama o objeto principal de todos, ele apenas cria 3 variáveis principais com os campos. E assim utilizamos o `adiciona(): void` com a tipagem sem retorno apenas para chamar na função principal de app!E assim devolvemos todo o objeto com suas propriedade tipadas corretamente!**
+As verificações são feitas para a regra de que todo o objeto **só deve ser carregado quando a data dentro dele for verifica caso esteja em dia útil**! Para isso usamos a função de *`diaUtil()`* que consegue usar os ***enums*** também carregados dentro do projeto e assim fazer a verificação.
+
+Dentro do arquivo, ainda sim temos a função de controlar para que tudo em view possa ser utilizado, onde lá será mexido. Porém aqui ainda sim temos a função de *`updateView()`*, que basicamente **consegue carregar a parte do array que é criado com cada objeto de Negociacao junto, e assim ser vizualizado** na tela a partir de view.
+
+---
