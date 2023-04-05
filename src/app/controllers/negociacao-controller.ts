@@ -2,6 +2,7 @@ import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MessageView } from "../views/message-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
+import { weekDays } from "../enums/week-days.js";
 
 export class NegociacaoController {
   private inputData!: HTMLInputElement;
@@ -47,7 +48,7 @@ export class NegociacaoController {
   }
 
   private diaUtil(date: Date) {
-    return date.getDay() > this.DOMINGO && date.getDay() < this.SABADO;
+    return date.getDay() > weekDays.DOMINGO && date.getDay() < weekDays.SABADO;
   }
   private criaNegociacao(): Negociacao {
     const exp = /-/g;
