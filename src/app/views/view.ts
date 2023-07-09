@@ -1,3 +1,5 @@
+import { execucaoTime } from "../decorators/execucaoTime";
+
 export abstract class View<T>{
 
     protected elemento: HTMLElement | null;
@@ -9,7 +11,6 @@ export abstract class View<T>{
             this.escapar = escapar;
         }
     }
-
     public update(model: T): void {
          let template = this.template(model);
         if (this.elemento) {
