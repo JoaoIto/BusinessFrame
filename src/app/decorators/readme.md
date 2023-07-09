@@ -11,7 +11,6 @@ Basicamente um trecho de código em funçãp que chama o método original e cham
 ```ts
 export function execucaoTime(){
     return function(
-        target: any,
         propertyKey: string,
         descriptor: PropertyDescriptor){
 
